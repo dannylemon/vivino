@@ -133,28 +133,3 @@ with open("port_wine.csv", "w", newline="") as csvfile:
             ]
         )
 print("Finished writing")
-# print(wines[75].numberofratings)
-# outputFile = open('output.csv', 'w', newline='')
-# outputWriter = csv.writer(outputFile)
-# outputWriter.writerow(wines)
-# outputFile.close()
-
-# print("parou de novo")
-
-# save_data("your_file.ods", wines)
-# print("parou de novo")
-
-# redwine_xpath /html/body/div[2]/div[4]/div/div/div[2]/div[1]/div/div[1]/div[2]/label[1]
-# whitewine_xpath /html/body/div[2]/div[4]/div/div/div[2]/div[1]/div/div[1]/div[2]/label[2]
-# sparklingwine_xpath /html/body/div[2]/div[4]/div/div/div[2]/div[1]/div/div[1]/div[2]/label[3]
-# rosewine_xpath /html/body/div[2]/div[4]/div/div/div[2]/div[1]/div/div[1]/div[2]/label[4]
-# dessertwine_xpath /html/body/div[2]/div[4]/div/div/div[2]/div[1]/div/div[1]/div[2]/label[5]
-# portwine_xpath /html/body/div[2]/div[4]/div/div/div[2]/div[1]/div/div[1]/div[2]/label[6]
-
-# primeirovinhodalista______xpath /html/body/div[2]/div[4]/div/div/div[2]/div[2]/div[1]/div[1]
-# vinicoladeumvinhox________xpath /html/body/div[2]/div[4]/div/div/div[2]/div[2]/div[1]/div[i]/div[2]/div[1]/a/span[1]
-# nomedeumvinhox____________xpath /html/body/div[2]/div[4]/div/div/div[2]/div[2]/div[1]/div[i]/div[2]/div[1]/a/span[2]
-# paisdeumvinhox____________xpath /html/body/div[2]/div[4]/div/div/div[2]/div[2]/div[1]/div[i]/div[2]/div[1]/div/a[2]
-# regiaodeumvinhox__________xpath /html/body/div[2]/div[4]/div/div/div[2]/div[2]/div[1]/div[i]/div[2]/div[1]/div/a[3]
-# notadeumvinhox____________xpath /html/body/div[2]/div[4]/div/div/div[2]/div[2]/div[1]/div[i]/div[2]/div[2]/div/div/div[1]
-# numeroderatingsdeumvinhox_xpath /html/body/div[2]/div[4]/div/div/div[2]/div[2]/div[1]/div[i]/div[2]/div[2]/div/div/div[2]/div[2]
