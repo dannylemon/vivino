@@ -1,15 +1,12 @@
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait, Select
+from selenium.webdriver.support.ui import WebDriverWait
 import csv
 import time
 
 driver = webdriver.Firefox()
 move = ActionChains(driver)
-wait = WebDriverWait(driver, 10)
 
 driver.get("https://www.vivino.com/explore")
 # ?country_codes[]=be // seria a continuação do link para um countrycode específico.
@@ -33,7 +30,7 @@ def scroll_down():
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
         # Wait to load the page.
-        time.sleep(2)
+        time.sleep(3)
 
         # Calculate new scroll height and compare with last scroll height.
         new_height = driver.execute_script("return document.body.scrollHeight")
@@ -46,7 +43,7 @@ def scroll_down():
 
 genrewine_button = driver.find_element_by_xpath(
     "/html/body/div[2]/div[4]/div/div/div[2]/div[1]/div/div[1]/div[2]/label[6]"
-    # mudar apenas o numero do label: 1-red 2-white 3-sparkling 4-rose 5-dessert 6-port
+    # label: 1-red 2-white 3-sparkling 4-rose 5-dessert 6-port
 )
 genrewine_button.click()
 
@@ -120,7 +117,6 @@ for i in range(1, wine_quantity + 1):
         ).text
     )
     wines.append(wine("Port", winery, name, country, region, rating, numberofratings))
-
 with open("port_wine.csv", "w", newline="") as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(
@@ -138,8 +134,7 @@ with open("port_wine.csv", "w", newline="") as csvfile:
                 wine.numberofratings,
             ]
         )
-
-print("acabou de gravar tudo")
+print("Finished writing")
 # print(wines[75].numberofratings)
 # outputFile = open('output.csv', 'w', newline='')
 # outputWriter = csv.writer(outputFile)
